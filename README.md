@@ -1,9 +1,9 @@
-AirPlay and Bose SoundTouch script by Daniel Bahl
+AirPlay and Bose SoundTouch scripts
 ===============
 
-Bose SoundTouch Scripts
+This GitHub contains awesome scripts for Bose SoundTouch and Apple AirPlay by Daniel Bahl
 
-This GitHub contains awesome scripts for Bose SoundTouch.
+===============
 
 * iTunes-AirPlay.scpt
 This is a simple AppleScript for controlling iTunes and AirPlay. 
