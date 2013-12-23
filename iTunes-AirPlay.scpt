@@ -21,25 +21,25 @@ This script can be included in a repeating iCal event, so it will start every da
 
 *)
 
-property KnobAmount : 4 -- Turn up every loop with this amount (ex. 4..8..12..16..)
-property WaitSeconds : 5 -- wait this many secounds
-property AdjustVolumeTo : 40 -- At the end, adjust the volume to this value
-property PlayThisPlaylist : "Radio - Nova FM" -- Playlist to play (Can be a playlist with a streaming radio station)
+property KnobAmount : 4 -- turn up the vol. every loop with this amount (ex. 4..8..12..16..)
+property WaitSeconds : 5 -- wait this many secounds betweens every loop
+property AdjustVolumeTo : 40 -- at the end, adjust the volume to this value
+property PlayThisPlaylist : "Radio - Nova FM" -- Playlist (Can be a playlist with a streaming radio station)
 
 tell application "iTunes"
 	
-	# Activate AirPlay Devices that is not Apple TV (this can be adjusted, if you want to AirPlay to an Apple TV)
-	# Available Devices: computer/AirPort Express/Apple TV/AirPlay device/unknown
+	# Activate all AirPlay devices except Apple TVs (this can be adjusted, if you want to AirPlay to an Apple TV)
+	# - Devicetypes: computer/AirPort Express/Apple TV/AirPlay device/unknown
 	# Bose SoundTouch is reconized as a "computer"
 	set current AirPlay devices to (get AirPlay devices whose kind is not Apple TV)
 	
-	# Sæt voluem to 0
+	# Set Volume to 0
 	set sound volume to 0
 	
-	# Tell iTunes to play the Playlist Nova FM
+	# Tell iTunes to play the Playlist
 	play playlist PlayThisPlaylist
 	
-	# Slwoly turn up the vilume
+	# Sloooowly turn up the volume
 	repeat
 		if (get sound volume) is greater than or equal to (AdjustVolumeTo - KnobAmount) then
 			set sound volume to AdjustVolumeTo
