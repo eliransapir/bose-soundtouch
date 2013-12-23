@@ -11,7 +11,14 @@ This is a simple AppleScript for controlling iTunes and AirPlay.
 This script can be used with all AirPlay-devices including Bose SoundTouch, AirPort Express etc.
 Video-demo available at www.danielbahl.dk
 
-The script detects all available AirPlay Devices and sets the audio volume to 0, it then plays a predefined playlist with either local music, iCloud music or a streaming audio file / radio station. It will slowly turn up the volume to a predefined value, perfect for using as a alarm clock in the morning.
+The script detects all available AirPlay Devices and sets the audio volume to 0, 
+it then plays a predefined playlist with either local music, iCloud music or
+a streaming audio file / radio station.
+
+It will slowly turn up the volume to a predefined value, perfect for using as a alarm clock in the morning.
+
+This script can be included in a repeating iCal event, so it will start every day.
+
 *)
 
 property KnobAmount : 4 -- Turn up every loop with this amount (ex. 4..8..12..16..)
@@ -23,6 +30,7 @@ tell application "iTunes"
 	
 	# Activate AirPlay Devices that is not Apple TV (this can be adjusted, if you want to AirPlay to an Apple TV)
 	# Available Devices: computer/AirPort Express/Apple TV/AirPlay device/unknown
+	# Bose SoundTouch is reconized as a "computer"
 	set current AirPlay devices to (get AirPlay devices whose kind is not Apple TV)
 	
 	# Sæt voluem to 0
