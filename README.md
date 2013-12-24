@@ -20,4 +20,21 @@ The script detects all available AirPlay Devices and sets the audio volume to 0,
 
 *  SoundTouch accesspoint: hold down the #2 and "Volume Down" - then connect to the BOSE WiFi AP and open http://192.168.1.1
 
-*  Now Playing XML Feed can be access on http://ip.of.bose:8090/now_playing/
+*  "Now Playing" XML-feed can be accessed on http://ip.of.bose:8090/now_playing/
+
+Example: 
+
+<nowPlaying deviceID="0000000000" source="INTERNET_RADIO">
+<ContentItem source="INTERNET_RADIO" location="0000" sourceAccount="">
+<itemName>DR P3</itemName>
+</ContentItem>
+<track/>
+<artist/>
+<album/>
+<stationName>DR P3</stationName>
+<art artImageStatus="IMAGE_PRESENT">http://logo.vtuner.net/007452/logo/logo-3516.jpg</art>
+<playStatus>PLAY_STATE</playStatus>
+<head/>
+</nowPlaying>
+
+* Info XML-feed can be accessed on http://ip.of.bose:8090/info
