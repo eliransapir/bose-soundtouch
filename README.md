@@ -23,7 +23,7 @@ The script detects all available AirPlay Devices and sets the audio volume to 0,
 *  "Now Playing" XML-feed can be accessed on http://ip.of.bose:8090/now_playing/
 
 Example: 
-
+```
 <nowPlaying deviceID="0000000000" source="INTERNET_RADIO">
 <ContentItem source="INTERNET_RADIO" location="0000" sourceAccount="">
 <itemName>DR P3</itemName>
@@ -36,5 +36,5 @@ Example:
 <playStatus>PLAY_STATE</playStatus>
 <head/>
 </nowPlaying>
-
+```
 * Info XML-feed can be accessed on http://ip.of.bose:8090/info
